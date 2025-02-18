@@ -1,15 +1,15 @@
-interface BienvenueAventurierprops {
-  titre: string;
-  texte: string;
-}
+import BienvenueAventurier from "./BienvenueAventurier";
 
-const BienvenueAventurier = ({ titre, texte }: BienvenueAventurierprops) => {
+const Exercice1 = () => {
   return (
     <section id="exercice1">
-      <h1>{titre}</h1>
-      <p>{texte}</p>
+      <BienvenueAventurier
+        texte="Boutique d'Archibald le Sorcier 🧙‍♂️"
+        titre=" Bienvenue Aventurier, ici vous pouvez acheter diverses potions pour vos
+        aventures !"
+      />
     </section>
   );
 };
 
-export default BienvenueAventurier;
+export default Exercice1;
