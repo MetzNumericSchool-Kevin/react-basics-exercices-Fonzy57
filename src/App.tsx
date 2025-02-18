@@ -1,21 +1,19 @@
 import "./App.css";
 
 // COMPONENTS
-import BienvenueAventurier from "./exercices/Exercice1/Component";
+import Exercice1 from "./exercices/Exercice1/Component";
+import Exercice2 from "./exercices/Exercice2/Component";
 
 function App() {
+  const reponseSorcier = (message: string) => {
+    alert(message);
+  };
+
   return (
     <div className="container p-5 mb-4 bg-body-tertiary rounded-3">
-      <BienvenueAventurier
-        titre="Boutique d'Archibald le Sorcier 🧙‍♂️"
-        texte=" Bienvenue Aventurier, ici vous pouvez acheter diverses potions pour vos
-        aventures !"
-      />
+      <Exercice1 />
 
-      <section id="exercice2">
-        <h2>Si je ne suis pas là, faites sonner la cloche !</h2>
-        <button className="btn btn-primary">🛎️ Appeler Archibald</button>
-      </section>
+      <Exercice2 />
 
       <h1 className="my-5">Voici quelques objets de ma boutique :</h1>
 
