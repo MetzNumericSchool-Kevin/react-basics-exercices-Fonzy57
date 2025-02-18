@@ -1,12 +1,17 @@
 interface BoutonAppelArchibaldProps {
-  quandSorcierRepond: () => void;
+  quandSorcierRepond: (message) => void;
 }
 
-const BoutonAppelArchibald = ({
-  quandSorcierRepond,
-}: BoutonAppelArchibaldProps) => {
+const BoutonAppelArchibald = (props: BoutonAppelArchibaldProps) => {
+  const message = "🧙‍♂️ Archibald : J'arrive, j'arrive Aventurier !";
+
   return (
-    <button className="btn btn-primary" onClick={quandSorcierRepond}>
+    <button
+      className="btn btn-primary"
+      onClick={function handleClick() {
+        props.quandSorcierRepond(message);
+      }}
+    >
       🛎️ Appeler Archibald
     </button>
   );
