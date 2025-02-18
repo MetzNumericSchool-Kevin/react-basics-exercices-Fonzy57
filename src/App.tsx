@@ -3,6 +3,7 @@ import "./App.css";
 // COMPONENTS
 import Exercice1 from "./exercices/Exercice1/Component";
 import Exercice2 from "./exercices/Exercice2/Component";
+import Exercice3 from "./exercices/Exercice3/Components";
 
 function App() {
   const reponseSorcier = (message: string) => {
@@ -17,19 +18,7 @@ function App() {
 
       <h1 className="my-5">Voici quelques objets de ma boutique :</h1>
 
-      <section id="exercice3" className="my-5 flex self-center">
-        <h2>Le miroir de beauté</h2>
-
-        <div className="card bg-dark border border-warning-subtle miroir">
-          <img src="aventurier.jpg" className="card-img-top img-fluid" />
-          <div className="card-body">
-            <h5 className="card-title">Miroir mon beau miroir</h5>
-            <p className="card-text">Quel est mon reflet ?</p>
-          </div>
-        </div>
-
-        <p>Vous avez l'air d'être un aventurier plein de charme dites-moi.</p>
-      </section>
+      <Exercice3 />
 
       <section id="exercice4" className="my-5">
         <h2>Les boîtes polycouleurs</h2>
