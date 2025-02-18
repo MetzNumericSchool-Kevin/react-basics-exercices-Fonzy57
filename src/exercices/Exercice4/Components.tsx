@@ -1,7 +1,24 @@
 import { useState } from "react";
 import Button from "./Button";
 import Box from "./Box";
-import { ButtonEnum } from "./Button.enum";
+
+const buttons = [
+  {
+    text: "Change la première boîte en rouge",
+    numberBox: 1,
+    color: "red",
+  },
+  {
+    text: "Change les 2 premieres boîtes en bleu",
+    numberBox: 2,
+    color: "blue",
+  },
+  {
+    text: "Change toutes les boîtes en vert",
+    numberBox: 3,
+    color: "green",
+  },
+];
 
 const Exercice4 = () => {
   const [colors, setColors] = useState<string[]>(["gray", "gray", "gray"]);
@@ -16,29 +33,20 @@ const Exercice4 = () => {
   return (
     <section id="exercice4" className="my-5">
       <h2>Les boîtes polycouleurs</h2>
-
       <div className="row">
-        <div className="col">
-          <Button
-            text="Change la première boîte en rouge"
-            color={ButtonEnum.red}
-            onClick={() => handleChangeColor("red", 1)}
-          />
-        </div>
-        <div className="col">
-          <Button
-            text="Change les 2 premieres boîtes en bleu"
-            color={ButtonEnum.blue}
-            onClick={() => handleChangeColor("blue", 2)}
-          />
-        </div>
-        <div className="col">
-          <Button
-            text="Change toutes les boîtes en vert"
-            color={ButtonEnum.green}
-            onClick={() => handleChangeColor("green", 3)}
-          />
-        </div>
+        {buttons.map((button, index) => {
+          return (
+            <div className="col" key={index}>
+              <Button
+                text={button.text}
+                color={button.color}
+                onClick={() =>
+                  handleChangeColor(button.color, button.numberBox)
+                }
+              />
+            </div>
+          );
+        })}
       </div>
 
       <div className="row mt-5 gap-5">
