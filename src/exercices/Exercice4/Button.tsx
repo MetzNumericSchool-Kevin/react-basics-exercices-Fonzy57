@@ -1,8 +1,6 @@
-import { ButtonEnum } from "./Button.enum";
-
 interface ButtonProps {
   text: string;
-  color: ButtonEnum;
+  color: string;
   onClick: () => void;
 }
 
@@ -10,13 +8,13 @@ const Button = ({ text, color, onClick }: ButtonProps) => {
   let buttonColor: string;
 
   switch (color) {
-    case ButtonEnum.red:
+    case "red":
       buttonColor = "btn-danger";
       break;
-    case ButtonEnum.blue:
+    case "blue":
       buttonColor = "btn-primary";
       break;
-    case ButtonEnum.green:
+    case "green":
       buttonColor = "btn-success";
       break;
 
