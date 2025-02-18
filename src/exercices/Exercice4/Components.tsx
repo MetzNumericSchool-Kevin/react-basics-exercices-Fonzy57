@@ -1,6 +1,7 @@
 import { useState } from "react";
-import Button, { ButtonEnum } from "./Button";
+import Button from "./Button";
 import Box from "./Box";
+import { ButtonEnum } from "./Button.enum";
 
 const Exercice4 = () => {
   const [colors, setColors] = useState<string[]>(["gray", "gray", "gray"]);

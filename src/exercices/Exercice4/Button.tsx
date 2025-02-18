@@ -1,8 +1,4 @@
-export enum ButtonEnum {
-  red,
-  blue,
-  green,
-}
+import { ButtonEnum } from "./Button.enum";
 
 interface ButtonProps {
   text: string;
